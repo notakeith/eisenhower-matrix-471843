@@ -1,8 +1,136 @@
-/*
+.eisenhower-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.matrix-header-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+  margin-left: 145px;
+}
 
-If your plugin does not need CSS, delete this file.
+.matrix-header-row .matrix-header {
+  width: 150px;
+}
 
-*/
+.matrix-header {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: #009688;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.matrix-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.quadrant {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quadrant h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.urgentImportant {
+  background-color: #ff5722;
+  color: white;
+}
+
+.notUrgentImportant {
+  background-color: #8bc34a;
+  color: white;
+}
+
+.urgentNotImportant {
+  background-color: #ffc107;
+  color: black;
+}
+
+.notUrgentNotImportant {
+  background-color: #607d8b;
+  color: white;
+}
+
+.quadrant:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+input,
+select,
+button {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+input[type="text"] {
+  width: 250px;
+}
+
+select {
+  width: 250px;
+  height: 42px;
+}
+
+.modal-content h2 {
+  margin: 0px
+}
+
+.quadrant ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quadrant ul li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.quadrant ul li::before {
+  content: "• ";
+  color: #009688;
+}
+
+.quadrant .no-tasks {
+  font-style: italic;
+  color: #888;
+  text-align: center;
+}
